@@ -17,6 +17,7 @@
 
 
   int main(){
+	waktuTgl();
         printf ("-------------------------------------------------------\n");
         printf ("|>>>>>>>>>|     OPERASI HITUNG MATRIKS      |<<<<<<<<<|\n");
     	printf ("-------------------------------------------------------\n");
@@ -216,14 +217,15 @@
        printf ("|    |         [1] Kembali                       |    |\n");
        printf ("|    |         [2] Keluar                        |    |\n");
        printf ("|<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>|\n");
-	     printf ("Angka menu pilihan [1/2] : ");
-		   scanf ("%d", &keluar);
-		   fflush (stdin);
+       printf ("Angka menu pilihan [1/2] : ");
+       scanf ("%d", &keluar);
+       fflush (stdin);
 		
         if (keluar == 2) { 
             printf ("-------------------------------------------------------\n");
             printf ("|>>>>>>>>>>>>>>|     TERIMA KASIH      |<<<<<<<<<<<<<<|\n");
             printf ("-------------------------------------------------------\n");
+	    waktuTgl();
             break;	
         }
 		
@@ -251,6 +253,6 @@
   void waktuTgl(){ //Hiasan menampilkan waktu tgl hari ini 
        time_t now; 
        time (&now); 
-       printf ("%.24s", ctime (&now)); 
+       printf ("%.24s\n", ctime (&now)); 
   } 
   
