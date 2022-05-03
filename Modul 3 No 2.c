@@ -3,6 +3,7 @@
 #include <windows.h>
 
   void breakBaris();
+  void waktuTgl();
   void tambah();
   void kali();
   void trans();
@@ -18,7 +19,7 @@
   int main(){
         printf ("-------------------------------------------------------\n");
         printf ("|>>>>>>>>>|     OPERASI HITUNG MATRIKS      |<<<<<<<<<|\n");
-    	  printf ("-------------------------------------------------------\n");
+    	printf ("-------------------------------------------------------\n");
         printf ("|    |         [1] Menjumlahkan Matriks          |    |\n");
         printf ("|    |         [2] Mengalikan Matriks            |    |\n");
         printf ("|    |         [3] Mentranspose Matriks          |    |\n");
@@ -52,9 +53,6 @@
         }
   }
 
-  void breakBaris(){
-    printf ("|<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>|\n");
-  }
 
   void tambah(){ //Penjumlahan matrix
        breakBaris();
@@ -214,7 +212,7 @@
 		
        printf ("-------------------------------------------------------\n");
        printf ("|>>>>>>>>>>|      YAKIN INGIN KELUAR?      |<<<<<<<<<<|\n");
-    	 printf ("-------------------------------------------------------\n");
+       printf ("-------------------------------------------------------\n");
        printf ("|    |         [1] Kembali                       |    |\n");
        printf ("|    |         [2] Keluar                        |    |\n");
        printf ("|<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>|\n");
@@ -243,4 +241,16 @@
         }
 		   } 
 	}
+
+
+  void breakBaris(){ //Hiasan memberi spacing terhadap baris
+    printf ("|<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>|\n");
+  }
+
+
+  void waktuTgl(){ //Hiasan menampilkan waktu tgl hari ini 
+       time_t now; 
+       time (&now); 
+       printf ("%.24s", ctime (&now)); 
+  } 
   
